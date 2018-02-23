@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="//unpkg.com/element-ui@2.1.0/lib/theme-chalk/index.css" rel="stylesheet">
+</head>
+<body>
+<script src="//unpkg.com/vue/dist/vue.js"></script>
+<script src="//unpkg.com/element-ui@2.1.0/lib/index.js"></script>
+<div id="app">
+  <template>
+    <el-steps :align-center="true" style="margin:20px 0 40px">
+        <el-step title="1"></el-step>
+        <el-step title="2"></el-step>
+        <el-step title="3"></el-step>
+    </el-steps>
+    <el-button type="primary" @click="openFullScreen" v-loading.fullscreen.lock="fullscreenLoading">
+      指令方式
+    </el-button>
+    <el-button type="primary" @click="openFullScreen2">
+      服务方式
+    </el-button>
+    <div style="background-color:#000;height:400px;color:#fff">345345dfg</div>
+  </template>
+</div>
+<script>
+    var Main = {
+    data() {
+      return {
+        fullscreenLoading: false
+      }
+    },
+    methods: {
+      openFullScreen() {
+        this.fullscreenLoading = true;
+        setTimeout(() => {
+          this.fullscreenLoading = false;
+        }, 2000);
+      },
+      openFullScreen2() {
+        const loading = this.$loading({
+          lock: true,
+          text: 'Loading',
+          spinner: 'el-icon-loading',
+          background: 'rgba(0, 0, 0, 0.7)'
+        });
+        setTimeout(() => {
+          loading.close();
+        }, 2000);
+      }
+    }
+  }
+var Ctor = Vue.extend(Main)
+new Ctor().$mount('#app')
+</script>
+</body>
+</html>
