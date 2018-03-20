@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="和包发红包，抽4999元大奖">
+    <meta name="renderer" content="webkit">
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <title>和包发红包，抽4999元大奖</title>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="full-screen" content="yes" />
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="x5-orientation" content="portrait" />
+    <meta name="360-fullscreen" content="true" />
+    <meta name="x5-page-mode" content="app" />
+    <meta name="browsermode" content="application" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <link rel="stylesheet" href="https://www.cmpay.com/info/version3/mkm/newyRed/styles/common.css?t=201802040233090"/>
+    <link rel="stylesheet" href="https://www.cmpay.com/info/version3/mkm/newyRed/styles/newyRedRaffle.css?t=201802040233090"/>
+    <script type="text/javascript" src="https://www.cmpay.com/info/version3/common/scripts/fixScreen/fixScreen.js?t=197001010800000"></script>
+    <script type="text/javascript">
+    window.urls = {
+        draw: "/gmeweb/qwxcbnhb_djcj.xhtml?viewCode=json", // 点击抽奖
+        my_gift: "/gmeweb/qwxcbnhb_mydraw.xhtml?viewCode=json", // 我的奖品
+        check_address: "/gmeweb/qwxcbnhb_addrpage.xhtml?viewCode=json", //查询收货地址
+        user_address: "/gmeweb/qwxcbnhb_addaddr.xhtml?viewCode=json", //登记收货地址
+        query_address:"/mkmweb/query_address.xhtml?viewCode=json" // 查询地址
+    };
+
+    window.dataInfo = {
+        MBL_NO: "", // 手机号
+        GME_ID: "HBZP1801", // 活动编号
+        AWA_CNT: "", // 抽奖机会
+        MSG_CD: "MKM92126", // 成功信息
+        MSG_INF: "您的登录信息已失效，请重新登录", // 成功信息
+        prizeFlag:true,//地址请求标志
+        saveAdd:true,//保存地址
+        manageFlag:true,//我的奖品请求标志
+        threeAdd:true, //三级联动标志
+        redactFlag:true,//编辑标志
+    };
+    </script>
+</head>
+
+<body>
+    <div class="content bw-ico">
+        <div class="time">
+            2018年2月9日至3月31日
+        </div>
+
+
+        <div class="goods-cirle">
+            <table id="tb" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <div class="gift-bg fighting"><i class="bw-ico gift-1"></i></div>
+                    </td>
+                    <td>
+                        <div class="gift-bg"><i class="bw-ico gift-2"></i></div>
+                    </td>
+                    <td>
+                        <div class="gift-bg"><i class="bw-ico gift-3"></i></div>
+                    </td>
+                    <!-- 谢谢参与 -->
+                    <td>
+                        <div class="gift-bg"><i class="bw-ico gift-4"></i></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="gift-bg"><i class="bw-ico gift-10"></i></div>
+                    </td>
+                    <td class="blank-bg"></td>
+                    <td class="blank-bg"></td>
+                    <td>
+                        <div class="gift-bg"><i class="bw-ico gift-5"></i></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="gift-bg"><i class="bw-ico gift-9"></i></div>
+                    </td>
+                    <td>
+                        <div class="gift-bg"><i class="bw-ico gift-8"></i></div>
+                    </td>
+                    <td>
+                        <div class="gift-bg"><i class="bw-ico gift-7"></i></div>
+                    </td>
+                    <td>
+                        <div class="gift-bg"><i class="bw-ico gift-6"></i></div>
+                    </td>
+                </tr>
+            </table>
+            <button class="once_bk">
+                <p class="once_txt">立即抽奖</p>
+                <p class="draw-font">还有<span id="AWA_CNT"></span>次抽奖机会</p>
+            </button>
+        </div>
+        <div class="giftFriend">
+            <button class="my-gift" title="我的奖品">
+            </button>
+            <button class="share">
+            </button>
+        </div>
+        <div class="act_content">
+            <p class="act_text">
+              活动期间，和包支付用户参与拜年分享红包活动、自行发和包现金红包或领取和包现金红包可获赠抽奖资格，有机会抽取4999元现金红包、咪咕定制版Kindle电子阅读器、咪咕音响HiFi、咪咕移动电源、和包果园道具奖品，同一用户每天只能获赠一次抽奖机会。
+            </p>
+
+
+        </div>
+        <a class="query-rules" title="查看活动规则">活动细则</a>
+        <div class="footer"></div>
+    </div>
+    <span id="manageBtn"></span>
+    <!-- 活动细则-->
+    <div class="rulesBox hidden ruleContent">
+        <div class="mon-layer"></div>
+        <div class="rules-box">
+            <p class="closeBtn"></p>
+            <div class="rulesInfo">
+                <div class="rulesContent">
+                      <ul>
+                        <li class="ruleQa">（一）本次抽奖活动对客户端版本和参与途径有要求吗？</li>
+                        <li>答：本次活动仅限和包支付客户端7.1及以上版本参与，仅限通过和包支付客户端内营销活动页面参与。</li>
+                        <li class="ruleQa">（二）怎么样才能获得抽奖资格？</li>
+                        <li>答：本次抽奖活动仅限参与和包支付新春红包营销活动的用户参与，活动期间分享拜年红包、用户自行发红包或领取红包的用户均可获得抽奖资格，参加其他营销活动获取现金红包的用户、非活动期间获取现金红包的用户均不可获得抽奖资格。</li>
+                        <li class="ruleQa">（三）活动期间可以抽几次奖？有哪些奖品？奖品数量是多少？</li>
+                        <li>答：活动期间同一用户每天仅能获得一次抽奖机会，同一手机号码视为同一用户，活动奖品及数量分别为：4999元现金红包4个；咪咕定制版Kindle100个；咪咕音箱HiFi100个；咪咕移动电源10000个；和包果园道具不限量，中奖概率49.7%。</li>
+                        <li class="ruleQa">（四）抽中4999元现金红包要怎么领取？</li>
+                        <li>答：和包支付实名用户才能成功领取现金红包，4999元现金红包等同于和包支付账户余额，可提现、转账、信用卡还款、购买和聚宝、直接消费等。</li>
+                        <li class="ruleQa">（五）抽中实物奖品怎么领取？</li>
+                        <li>答：抽得实物奖品的用户请在获奖当天填写收货信息，我们将安排第三方配送商分批发货，最后一批奖品将在2018年4月15日前统一配送，配送费用由和包支付承担。具体发货时间以下发短信通知为准。用户未在2018年3月31日前填写收货信息的、用户填写配送地址错误、快递员无法联系到用户导致奖品退回的，均视为用户自动放弃奖品。获赠奖品以最终送出的实物为准，不能兑换现金或更换其他奖品，和包支付不是奖品的生产商或供应商，奖品的质量问题、售后服务均由奖品生产商负责。</li>
+                        <li class="ruleQa">（六）哪些用户无法领取奖品？</li>
+                        <li>答：在本次活动期间，如用户存在违规行为（包括但不限于刷量、恶意套取、机器作弊、倒买倒卖等），中移电子商务有限公司有权采取如取消用户参与资格、回收所领礼品或结束该活动、追究法律责任等措施。</li>
+                        <li class="ruleQa">（七）活动是否与其他应用商店相关？</li>
+                        <li>答：本活动与苹果等应用商店无关。</li>
+                    </ul>
+
+
+
+                </div>
+            </div>
+            <span class="ruleClose"></span>
+        </div>
+    </div>
+    <!-- 抽奖结果  中奖-->
+    <div class="rulesBox hidden suc-result">
+        <div class="mon-layer"></div>
+        <div class="rules-box">
+            <div class="rulesInfo">
+                <div class="rulesContent result winning">
+                    <p  class="prizeNo">恭喜您获得</p>
+                    <p class="prize"></p>
+                    <button type="button" class="confirm" id="win_btn"></button>
+                    <p class="stateTxt">奖品已收到实物为准</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--我的奖品 地址填写-->
+    <div class="managePrize hidden">
+        <div class="mon-layer"></div>
+        <div class="manageBox">
+            <span class="manageClose"></span>
+            <div class="headBox clearfix">
+                <div class="manageTitle fl on">我的奖品</div>
+                <div class="prizeTitle fr">地址管理</div>
+            </div>
+            <div class="manage">
+                <ul>
+                </ul>
+            </div>
+            <div class="m-pageWrap u-clearfix" id="pageBar">
+            </div>
+            <div class="prizeSite hidden">
+                <div class="Font">
+                    <label class="name">名字：</label>
+                    <input type="text" id="recName" placeholder="请输入收货人姓名"   maxlength="32" />
+                </div>
+                <div class="Font">
+                    <label class="mbl">电话：</label>
+                    <input type="tel" id="mblNo"  placeholder="请输入收货人联系电话"  maxlength="12" />
+                </div>
+                <div class="Font">
+                    <label class="shen">选择省份：</label>
+                    <input type="text" id="proInput"  placeholder="选择省份"  maxlength="25"/>
+                    <span class="selectArrow" id="proArrow"></span>
+                    <ul class="list hidden" id="proList">
+
+                    </ul>
+                </div>
+                <div class="Font">
+                    <label class="shen">选择城市：</label>
+                    <input type="text" id="cityInput"  placeholder="选择城市"  maxlength="25" />
+                    <span class="selectArrow" id="cityArrow"></span>
+                    <ul class="list hidden" id="cityList">
+                    </ul>
+                </div>
+                <div class="Font">
+                    <label class="shen">选择区县：</label>
+                    <input type="text" id="counInput"  placeholder="选择区县"  maxlength="25"/>
+                    <span class="selectArrow" id="counArrow"></span>
+                    <ul class="list hidden" id="counList">
+                    </ul>
+                </div>
+                <p class="Font-detail">
+                    <label class="details-address">详细地址：</label>
+                    <textarea  cols="50" rows="12" placeholder="请输入详细地址" maxlength="150" id="detailsAddress"  class="details"></textarea>
+                </p>
+            </div>
+            <div class="addressBox hidden clearfix">
+                <div class="redact fl">编辑</div>
+                <div class="save saved fr">保存</div>
+            </div>
+            <p class="dateTxt hidden">收货地址将于3月31日之前关闭，请各位尽快确认收货地址。</p>
+        </div>
+    </div>
+    <div class="toastbox"  id="toastcenter">
+        <p class="toastinfo">
+
+        </p>
+    </div>
+    <script type="text/javascript" src="https://www.cmpay.com/info/version3/common/scripts/core/core-3.1.1.min.js?t=197001010800000"></script>
+    <script type="text/javascript" src="https://www.cmpay.com/info/version3/mkm/common/scripts/H5toClient.js?t=197001010800000"></script>
+    <script type="text/javascript" src="https://www.cmpay.com/info/version3/eta/etaH5/scripts/fastclick.js?t=197001010800000"></script>
+    <script type="text/javascript" src="https://www.cmpay.com/info/version3/mkm/newyRed/scripts/pagination.js?t=201802040233090"></script>
+    <script src="http://wechatfe.github.io/vconsole/lib/vconsole.min.js?v=3.0.0.0"></script>
+    <script>
+    window.vConsole = new window.VConsole();
+
+            var GetSide = function (m, n) {
+                //初始化数组
+                var arr = [];
+                for (var i = 0; i < m; i++) {
+                    arr.push([]);
+                    for (var j = 0; j < n; j++) {
+                        arr[i][j] = i * n + j;
+                    }
+                }
+                //获取数组最外圈
+                var resultArr = [],
+                    tempX = 0,
+                    tempY = 0,
+                    direction = "Along",
+                    count = 0;
+                while (tempX >= 0 && tempX < n && tempY >= 0 && tempY < m && count < m * n) {
+                    count++;
+                    resultArr.push([tempY, tempX]);
+                    if (direction == "Along") {
+                        if (tempX == n - 1)
+                            tempY++;
+                        else
+                            tempX++;
+                        if (tempX == n - 1 && tempY == m - 1)
+                            direction = "Inverse"
+                    }
+                    else {
+                        if (tempX == 0)
+                            tempY--;
+                        else
+                            tempX--;
+                        if (tempX == 0 && tempY == 0)
+                            break;
+                    }
+                }
+                return resultArr;
+            },
+                drawFlag = 'N',// 是否中奖
+                awaCnt = dataInfo.AWA_CNT !== '' ? dataInfo.AWA_CNT : '0', // 抽奖次数
+                index = 0,           //当前亮区位置
+                prevIndex = 0,          //前一位置
+                Speed = 50,           //初始速度
+                Time,            // 定义对象
+                arr = GetSide(3, 4),         //初始化数组
+                EndIndex = 0,           //决定在哪一格变慢
+                tb = document.getElementById("tb"),     //获取tb对象
+                cycle = 0,           //转动圈数
+                EndCycle = 0,        //计算圈数
+                overflag = false,        //结束转动标志
+                quick = 0,           //加速
+                jumpURL = '', // 跳转链接
+                mercId = '', // 商户编号
+                hit_info = '',   //中奖名称
+                pag = 1,//查询页
+                maxpage,//总页数
+                address_url = urls.user_address;//用户地址
+            /*
+             * 定义数组
+             */
+            window.Star = function (num) {
+                //跑马灯变速
+                if (overflag == false) {
+                    //走五格开始加速
+                    if (quick == 4) {
+                        clearInterval(Time);
+                        Speed = 30;
+                        Time = setInterval(Star, Speed);
+                    }
+                    //跑N圈减速
+                    if (cycle == EndCycle + 1 && index == parseInt(EndIndex)) {
+                        clearInterval(Time);
+                        Speed = 50;
+                        overflag = true;         //触发结束
+                        Time = setInterval(Star, Speed);
+                    }
+                }
+
+                if (index >= arr.length) {
+                    index = 0;
+                    cycle++;
+                }
+
+                //结束转动并选中号码
+                if (overflag == true && index == EndIndex - 1) {
+                    quick = 0;
+                    clearInterval(Time);
+                }
+
+                // 增加发光的圈
+                $(tb.rows[arr[index][0]].cells[arr[index][1]].firstElementChild).addClass('fighting');
+
+                if (index > 0) {
+                    prevIndex = index - 1;
+                } else {
+                    prevIndex = arr.length - 1;
+                }
+
+                // 去除发光的圈
+                $(tb.rows[arr[prevIndex][0]].cells[arr[prevIndex][1]].firstElementChild).removeClass('fighting');
+                index++;
+                quick++;
+
+                if (overflag == true && index == EndIndex) {
+                    $('.once_bk').prop('disabled', false);
+                    alert('转盘转完');
+                }
+
+            };
+
+            var prizeFun = function (num) {
+                // alert(num);
+                if (num === 1) {
+                    EndIndex = '6';
+                } else if (num === 2) {
+                    EndIndex = '9';
+                } else if (num === 3) {
+                    EndIndex = '3';
+                } else if (num === 4) {
+                    EndIndex = '1';
+                } else if (num === 5) {
+                    EndIndex = '2';
+                } else if (num === 6) {
+                    EndIndex = '4';
+                } else if (num === 7) {
+                    EndIndex = '8';
+                } else {
+                    EndIndex = '7';
+                }
+
+                EndIndex = 2;
+            };
+
+            // 点击抽奖
+            $('.once_bk').on('click', function () {
+                clearInterval(Time);
+                cycle = 0;
+                overflag = false;
+                EndCycle = 1;
+
+                var msg = {
+                    GWA : {
+                        MSG_CD : 'XXX00000',
+                    },
+                    AWA_CNT: '1',
+                    DRAW_FLG: 'Y',
+                    JUMP_FLG: 'N',
+                    DRAW_ID: '0',
+                    DRAW_NM: '??'
+
+                }
+
+                if (msg && msg.GWA.MSG_CD) {
+                    var MSG_CD = msg.GWA.MSG_CD.substr(3);
+                    if (MSG_CD !== '00000') {
+                        showError(msg.GWA.MSG_INF);
+                        $('.once_bk').prop('disabled', false);
+                        return;
+                    } else {
+                        awaCnt = msg.AWA_CNT; // 剩余抽奖次数
+                        drawFlag = msg.DRAW_FLG; // 是否中奖
+                        $('#AWA_CNT').text(awaCnt);
+                        if (drawFlag === "Y") {
+                            if (msg.JUMP_FLG === "Y") {
+                                $("#win_btn").text("填写收货地址");
+                                $("#win_btn").on("click", function () {
+                                    $(".managePrize").show();
+                                    $(".manage, #pageBar").hide();
+                                    $(".prizeTitle").click();
+                                })
+                            } else {
+                                $("#win_btn").text("关闭");
+                            }
+                            if(msg.DRAW_ID){
+                                prizeFun(parseInt(msg.DRAW_ID.substr(10)));
+                            }
+                            $('.suc-result .prize').text(msg.DRAW_NM);
+                        } else {
+                            EndIndex = '7';
+                            $(".prizeNo").text("很遗憾，您未中奖");
+                            $(".stateTxt").text(" ");
+                            $(".stateTxt").css("height", "0.24rem");
+                            $("#win_btn").text("关闭");
+                            $('.suc-result .prize').hide();
+                        }
+                        Time = setInterval(Star, Speed);
+                    }
+                }
+            });
+
+        // });
+        //报错弹框
+        function showError (text) {
+            $(".toastinfo").html(text);
+            $("#toastcenter").show(300);
+            setTimeout("$('#toastcenter').hide();", 3000);
+        };
+    </script>
+</body>
+</html>
