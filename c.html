@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keywords" content="�Ͱ����������4999Ԫ��">
+    <meta name="keywords" content="和包发红包，抽4999元大奖">
     <meta name="renderer" content="webkit">
     <meta content="telephone=no" name="format-detection" />
     <meta content="email=no" name="format-detection" />
-    <title>�Ͱ����������4999Ԫ��</title>
+    <title>和包发红包，抽4999元大奖</title>
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="format-detection" content="telephone=no, email=no" />
     <meta http-equiv="Pragma" content="no-cache" />
@@ -29,24 +28,24 @@
     <script type="text/javascript" src="https://www.cmpay.com/info/version3/common/scripts/fixScreen/fixScreen.js?t=197001010800000"></script>
     <script type="text/javascript">
     window.urls = {
-        draw: "/gmeweb/qwxcbnhb_djcj.xhtml?viewCode=json", // ����齱
-        my_gift: "/gmeweb/qwxcbnhb_mydraw.xhtml?viewCode=json", // �ҵĽ�Ʒ
-        check_address: "/gmeweb/qwxcbnhb_addrpage.xhtml?viewCode=json", //��ѯ�ջ���ַ
-        user_address: "/gmeweb/qwxcbnhb_addaddr.xhtml?viewCode=json", //�Ǽ��ջ���ַ
-        query_address:"/mkmweb/query_address.xhtml?viewCode=json" // ��ѯ��ַ
+        draw: "/gmeweb/qwxcbnhb_djcj.xhtml?viewCode=json", // 点击抽奖
+        my_gift: "/gmeweb/qwxcbnhb_mydraw.xhtml?viewCode=json", // 我的奖品
+        check_address: "/gmeweb/qwxcbnhb_addrpage.xhtml?viewCode=json", //查询收货地址
+        user_address: "/gmeweb/qwxcbnhb_addaddr.xhtml?viewCode=json", //登记收货地址
+        query_address:"/mkmweb/query_address.xhtml?viewCode=json" // 查询地址
     };
 
     window.dataInfo = {
-        MBL_NO: "", // �ֻ���
-        GME_ID: "HBZP1801", // ����
-        AWA_CNT: "", // �齱����
-        MSG_CD: "MKM92126", // �ɹ���Ϣ
-        MSG_INF: "���ĵ�¼��Ϣ��ʧЧ�������µ�¼", // �ɹ���Ϣ
-        prizeFlag:true,//��ַ�����־
-        saveAdd:true,//�����ַ
-        manageFlag:true,//�ҵĽ�Ʒ�����־
-        threeAdd:true, //����������־
-        redactFlag:true,//�༭��־
+        MBL_NO: "", // 手机号
+        GME_ID: "HBZP1801", // 活动编号
+        AWA_CNT: "", // 抽奖机会
+        MSG_CD: "MKM92126", // 成功信息
+        MSG_INF: "您的登录信息已失效，请重新登录", // 成功信息
+        prizeFlag:true,//地址请求标志
+        saveAdd:true,//保存地址
+        manageFlag:true,//我的奖品请求标志
+        threeAdd:true, //三级联动标志
+        redactFlag:true,//编辑标志
     };
     </script>
 </head>
@@ -54,7 +53,7 @@
 <body>
     <div class="content bw-ico">
         <div class="time">
-            2018��2��9����3��31��
+            2018年2月9日至3月31日
         </div>
 
 
@@ -70,7 +69,7 @@
                     <td>
                         <div class="gift-bg"><i class="bw-ico gift-3"></i></div>
                     </td>
-                    <!-- лл���� -->
+                    <!-- 谢谢参与 -->
                     <td>
                         <div class="gift-bg"><i class="bw-ico gift-4"></i></div>
                     </td>
@@ -101,28 +100,28 @@
                 </tr>
             </table>
             <button class="once_bk">
-                <p class="once_txt">�����齱</p>
-                <p class="draw-font">����<span id="AWA_CNT"></span>�γ齱����</p>
+                <p class="once_txt">立即抽奖</p>
+                <p class="draw-font">还有<span id="AWA_CNT"></span>次抽奖机会</p>
             </button>
         </div>
         <div class="giftFriend">
-            <button class="my-gift" title="�ҵĽ�Ʒ">
+            <button class="my-gift" title="我的奖品">
             </button>
             <button class="share">
             </button>
         </div>
         <div class="act_content">
             <p class="act_text">
-              ��ڼ䣬�Ͱ�֧���û��������������������з��Ͱ��ֽ�������ȡ�Ͱ��ֽ����ɻ����齱�ʸ��л����ȡ4999Ԫ�ֽ������乾���ư�Kindle�����Ķ������乾����HiFi���乾�ƶ���Դ���Ͱ���԰���߽�Ʒ��ͬһ�û�ÿ��ֻ�ܻ���һ�γ齱���ᡣ
+              活动期间，和包支付用户参与拜年分享红包活动、自行发和包现金红包或领取和包现金红包可获赠抽奖资格，有机会抽取4999元现金红包、咪咕定制版Kindle电子阅读器、咪咕音响HiFi、咪咕移动电源、和包果园道具奖品，同一用户每天只能获赠一次抽奖机会。
             </p>
 
 
         </div>
-        <a class="query-rules" title="�鿴�����">�ϸ��</a>
+        <a class="query-rules" title="查看活动规则">活动细则</a>
         <div class="footer"></div>
     </div>
     <span id="manageBtn"></span>
-    <!-- �ϸ��-->
+    <!-- 活动细则-->
     <div class="rulesBox hidden ruleContent">
         <div class="mon-layer"></div>
         <div class="rules-box">
@@ -130,20 +129,20 @@
             <div class="rulesInfo">
                 <div class="rulesContent">
                       <ul>
-                        <li class="ruleQa">��һ�����γ齱��Կͻ��˰汾�Ͳ���;����Ҫ����</li>
-                        <li>�𣺱��λ���޺Ͱ�֧���ͻ���7.1�����ϰ汾���룬����ͨ���Ͱ�֧���ͻ�����Ӫ���ҳ����롣</li>
-                        <li class="ruleQa">��������ô�����ܻ�ó齱�ʸ�</li>
-                        <li>�𣺱��γ齱����޲���Ͱ�֧���´����Ӫ������û����룬��ڼ�������������û����з��������ȡ������û����ɻ�ó齱�ʸ񣬲μ�����Ӫ�����ȡ�ֽ������û����ǻ�ڼ��ȡ�ֽ������û������ɻ�ó齱�ʸ�</li>
-                        <li class="ruleQa">��������ڼ���Գ鼸�ν�������Щ��Ʒ����Ʒ�����Ƕ��٣�</li>
-                        <li>�𣺻�ڼ�ͬһ�û�ÿ����ܻ��һ�γ齱���ᣬͬһ�ֻ�������Ϊͬһ�û������Ʒ�������ֱ�Ϊ��4999Ԫ�ֽ���4�����乾���ư�Kindle100�����乾����HiFi100�����乾�ƶ���Դ10000�����Ͱ���԰���߲��������н�����49.7%��</li>
-                        <li class="ruleQa">���ģ�����4999Ԫ�ֽ���Ҫ��ô��ȡ��</li>
-                        <li>�𣺺Ͱ�֧��ʵ���û����ܳɹ���ȡ�ֽ�����4999Ԫ�ֽ�����ͬ�ںͰ�֧���˻��������֡�ת�ˡ����ÿ��������;۱���ֱ�����ѵȡ�</li>
-                        <li class="ruleQa">���壩����ʵ�ｱƷ��ô��ȡ��</li>
-                        <li>�𣺳��ʵ�ｱƷ���û����ڻ񽱵�����д�ջ���Ϣ�����ǽ����ŵ����������̷������������һ����Ʒ����2018��4��15��ǰͳһ���ͣ����ͷ����ɺͰ�֧���е������巢��ʱ�����·�����֪ͨΪ׼���û�δ��2018��3��31��ǰ��д�ջ���Ϣ�ġ��û���д���͵�ַ���󡢿��Ա�޷���ϵ���û����½�Ʒ�˻صģ�����Ϊ�û��Զ�������Ʒ��������Ʒ�������ͳ���ʵ��Ϊ׼�����ܶһ��ֽ�����������Ʒ���Ͱ�֧�����ǽ�Ʒ�������̻�Ӧ�̣���Ʒ���������⡢�ۺ������ɽ�Ʒ�����̸���</li>
-                        <li class="ruleQa">��������Щ�û��޷���ȡ��Ʒ��</li>
-                        <li>���ڱ��λ�ڼ䣬���û�����Υ����Ϊ��������������ˢ����������ȡ���������ס��������ȣ������Ƶ����������޹�˾��Ȩ��ȡ��ȡ���û������ʸ񡢻���������Ʒ������û��׷���������εȴ�ʩ��</li>
-                        <li class="ruleQa">���ߣ���Ƿ�������Ӧ���̵���أ�</li>
-                        <li>�𣺱����ƻ����Ӧ���̵��޹ء�</li>
+                        <li class="ruleQa">（一）本次抽奖活动对客户端版本和参与途径有要求吗？</li>
+                        <li>答：本次活动仅限和包支付客户端7.1及以上版本参与，仅限通过和包支付客户端内营销活动页面参与。</li>
+                        <li class="ruleQa">（二）怎么样才能获得抽奖资格？</li>
+                        <li>答：本次抽奖活动仅限参与和包支付新春红包营销活动的用户参与，活动期间分享拜年红包、用户自行发红包或领取红包的用户均可获得抽奖资格，参加其他营销活动获取现金红包的用户、非活动期间获取现金红包的用户均不可获得抽奖资格。</li>
+                        <li class="ruleQa">（三）活动期间可以抽几次奖？有哪些奖品？奖品数量是多少？</li>
+                        <li>答：活动期间同一用户每天仅能获得一次抽奖机会，同一手机号码视为同一用户，活动奖品及数量分别为：4999元现金红包4个；咪咕定制版Kindle100个；咪咕音箱HiFi100个；咪咕移动电源10000个；和包果园道具不限量，中奖概率49.7%。</li>
+                        <li class="ruleQa">（四）抽中4999元现金红包要怎么领取？</li>
+                        <li>答：和包支付实名用户才能成功领取现金红包，4999元现金红包等同于和包支付账户余额，可提现、转账、信用卡还款、购买和聚宝、直接消费等。</li>
+                        <li class="ruleQa">（五）抽中实物奖品怎么领取？</li>
+                        <li>答：抽得实物奖品的用户请在获奖当天填写收货信息，我们将安排第三方配送商分批发货，最后一批奖品将在2018年4月15日前统一配送，配送费用由和包支付承担。具体发货时间以下发短信通知为准。用户未在2018年3月31日前填写收货信息的、用户填写配送地址错误、快递员无法联系到用户导致奖品退回的，均视为用户自动放弃奖品。获赠奖品以最终送出的实物为准，不能兑换现金或更换其他奖品，和包支付不是奖品的生产商或供应商，奖品的质量问题、售后服务均由奖品生产商负责。</li>
+                        <li class="ruleQa">（六）哪些用户无法领取奖品？</li>
+                        <li>答：在本次活动期间，如用户存在违规行为（包括但不限于刷量、恶意套取、机器作弊、倒买倒卖等），中移电子商务有限公司有权采取如取消用户参与资格、回收所领礼品或结束该活动、追究法律责任等措施。</li>
+                        <li class="ruleQa">（七）活动是否与其他应用商店相关？</li>
+                        <li>答：本活动与苹果等应用商店无关。</li>
                     </ul>
 
 
@@ -153,28 +152,28 @@
             <span class="ruleClose"></span>
         </div>
     </div>
-    <!-- �齱���  �н�-->
+    <!-- 抽奖结果  中奖-->
     <div class="rulesBox hidden suc-result">
         <div class="mon-layer"></div>
         <div class="rules-box">
             <div class="rulesInfo">
                 <div class="rulesContent result winning">
-                    <p  class="prizeNo">��ϲ�����</p>
+                    <p  class="prizeNo">恭喜您获得</p>
                     <p class="prize"></p>
                     <button type="button" class="confirm" id="win_btn"></button>
-                    <p class="stateTxt">��Ʒ���յ�ʵ��Ϊ׼</p>
+                    <p class="stateTxt">奖品已收到实物为准</p>
                 </div>
             </div>
         </div>
     </div>
-    <!--�ҵĽ�Ʒ ��ַ��д-->
+    <!--我的奖品 地址填写-->
     <div class="managePrize hidden">
         <div class="mon-layer"></div>
         <div class="manageBox">
             <span class="manageClose"></span>
             <div class="headBox clearfix">
-                <div class="manageTitle fl on">�ҵĽ�Ʒ</div>
-                <div class="prizeTitle fr">��ַ����</div>
+                <div class="manageTitle fl on">我的奖品</div>
+                <div class="prizeTitle fr">地址管理</div>
             </div>
             <div class="manage">
                 <ul>
@@ -184,45 +183,45 @@
             </div>
             <div class="prizeSite hidden">
                 <div class="Font">
-                    <label class="name">���֣�</label>
-                    <input type="text" id="recName" placeholder="�������ջ�������"   maxlength="32" />
+                    <label class="name">名字：</label>
+                    <input type="text" id="recName" placeholder="请输入收货人姓名"   maxlength="32" />
                 </div>
                 <div class="Font">
-                    <label class="mbl">�绰��</label>
-                    <input type="tel" id="mblNo"  placeholder="�������ջ�����ϵ�绰"  maxlength="12" />
+                    <label class="mbl">电话：</label>
+                    <input type="tel" id="mblNo"  placeholder="请输入收货人联系电话"  maxlength="12" />
                 </div>
                 <div class="Font">
-                    <label class="shen">ѡ��ʡ�ݣ�</label>
-                    <input type="text" id="proInput"  placeholder="ѡ��ʡ��"  maxlength="25"/>
+                    <label class="shen">选择省份：</label>
+                    <input type="text" id="proInput"  placeholder="选择省份"  maxlength="25"/>
                     <span class="selectArrow" id="proArrow"></span>
                     <ul class="list hidden" id="proList">
 
                     </ul>
                 </div>
                 <div class="Font">
-                    <label class="shen">ѡ����У�</label>
-                    <input type="text" id="cityInput"  placeholder="ѡ�����"  maxlength="25" />
+                    <label class="shen">选择城市：</label>
+                    <input type="text" id="cityInput"  placeholder="选择城市"  maxlength="25" />
                     <span class="selectArrow" id="cityArrow"></span>
                     <ul class="list hidden" id="cityList">
                     </ul>
                 </div>
                 <div class="Font">
-                    <label class="shen">ѡ�����أ�</label>
-                    <input type="text" id="counInput"  placeholder="ѡ������"  maxlength="25"/>
+                    <label class="shen">选择区县：</label>
+                    <input type="text" id="counInput"  placeholder="选择区县"  maxlength="25"/>
                     <span class="selectArrow" id="counArrow"></span>
                     <ul class="list hidden" id="counList">
                     </ul>
                 </div>
                 <p class="Font-detail">
-                    <label class="details-address">��ϸ��ַ��</label>
-                    <textarea  cols="50" rows="12" placeholder="��������ϸ��ַ" maxlength="150" id="detailsAddress"  class="details"></textarea>
+                    <label class="details-address">详细地址：</label>
+                    <textarea  cols="50" rows="12" placeholder="请输入详细地址" maxlength="150" id="detailsAddress"  class="details"></textarea>
                 </p>
             </div>
             <div class="addressBox hidden clearfix">
-                <div class="redact fl">�༭</div>
-                <div class="save saved fr">����</div>
+                <div class="redact fl">编辑</div>
+                <div class="save saved fr">保存</div>
             </div>
-            <p class="dateTxt hidden">�ջ���ַ����3��31��֮ǰ�رգ����λ����ȷ���ջ���ַ��</p>
+            <p class="dateTxt hidden">收货地址将于3月31日之前关闭，请各位尽快确认收货地址。</p>
         </div>
     </div>
     <div class="toastbox"  id="toastcenter">
@@ -239,7 +238,7 @@
     window.vConsole = new window.VConsole();
 
             var GetSide = function (m, n) {
-                //��ʼ������
+                //初始化数组
                 var arr = [];
                 for (var i = 0; i < m; i++) {
                     arr.push([]);
@@ -247,7 +246,7 @@
                         arr[i][j] = i * n + j;
                     }
                 }
-                //��ȡ��������Ȧ
+                //获取数组最外圈
                 var resultArr = [],
                     tempX = 0,
                     tempY = 0,
@@ -275,42 +274,42 @@
                 }
                 return resultArr;
             },
-                drawFlag = 'N',// �Ƿ��н�
-                awaCnt = dataInfo.AWA_CNT !== '' ? dataInfo.AWA_CNT : '0', // �齱����
-                index = 0,           //��ǰ����λ��
-                prevIndex = 0,          //ǰһλ��
-                Speed = 50,           //��ʼ�ٶ�
-                Time,            // �������
-                arr = GetSide(3, 4),         //��ʼ������
-                EndIndex = 0,           //��������һ�����
-                tb = document.getElementById("tb"),     //��ȡtb����
-                cycle = 0,           //ת��Ȧ��
-                EndCycle = 0,        //����Ȧ��
-                overflag = false,        //����ת����־
-                quick = 0,           //����
-                jumpURL = '', // ��ת����
-                mercId = '', // �̻����
-                hit_info = '',   //�н�����
-                pag = 1,//��ѯҳ
-                maxpage,//��ҳ��
-                address_url = urls.user_address;//�û���ַ
+                drawFlag = 'N',// 是否中奖
+                awaCnt = dataInfo.AWA_CNT !== '' ? dataInfo.AWA_CNT : '0', // 抽奖次数
+                index = 0,           //当前亮区位置
+                prevIndex = 0,          //前一位置
+                Speed = 50,           //初始速度
+                Time,            // 定义对象
+                arr = GetSide(3, 4),         //初始化数组
+                EndIndex = 0,           //决定在哪一格变慢
+                tb = document.getElementById("tb"),     //获取tb对象
+                cycle = 0,           //转动圈数
+                EndCycle = 0,        //计算圈数
+                overflag = false,        //结束转动标志
+                quick = 0,           //加速
+                jumpURL = '', // 跳转链接
+                mercId = '', // 商户编号
+                hit_info = '',   //中奖名称
+                pag = 1,//查询页
+                maxpage,//总页数
+                address_url = urls.user_address;//用户地址
             /*
-             * ��������
+             * 定义数组
              */
             window.Star = function (num) {
-                //�����Ʊ���
+                //跑马灯变速
                 if (overflag == false) {
-                    //�����ʼ����
+                    //走五格开始加速
                     if (quick == 4) {
                         clearInterval(Time);
                         Speed = 30;
                         Time = setInterval(Star, Speed);
                     }
-                    //��NȦ����
+                    //跑N圈减速
                     if (cycle == EndCycle + 1 && index == parseInt(EndIndex)) {
                         clearInterval(Time);
                         Speed = 50;
-                        overflag = true;         //��������
+                        overflag = true;         //触发结束
                         Time = setInterval(Star, Speed);
                     }
                 }
@@ -320,13 +319,13 @@
                     cycle++;
                 }
 
-                //����ת����ѡ�к���
+                //结束转动并选中号码
                 if (overflag == true && index == EndIndex - 1) {
                     quick = 0;
                     clearInterval(Time);
                 }
 
-                // ���ӷ����Ȧ
+                // 增加发光的圈
                 $(tb.rows[arr[index][0]].cells[arr[index][1]].firstElementChild).addClass('fighting');
 
                 if (index > 0) {
@@ -335,14 +334,14 @@
                     prevIndex = arr.length - 1;
                 }
 
-                // ȥ�������Ȧ
+                // 去除发光的圈
                 $(tb.rows[arr[prevIndex][0]].cells[arr[prevIndex][1]].firstElementChild).removeClass('fighting');
                 index++;
                 quick++;
 
                 if (overflag == true && index == EndIndex) {
                     $('.once_bk').prop('disabled', false);
-                    alert('ת��ת��');
+                    alert('转盘转完');
                 }
 
             };
@@ -370,7 +369,7 @@
                 EndIndex = 2;
             };
 
-            // ����齱
+            // 点击抽奖
             $('.once_bk').on('click', function () {
                 clearInterval(Time);
                 cycle = 0;
@@ -396,19 +395,19 @@
                         $('.once_bk').prop('disabled', false);
                         return;
                     } else {
-                        awaCnt = msg.AWA_CNT; // ʣ��齱����
-                        drawFlag = msg.DRAW_FLG; // �Ƿ��н�
+                        awaCnt = msg.AWA_CNT; // 剩余抽奖次数
+                        drawFlag = msg.DRAW_FLG; // 是否中奖
                         $('#AWA_CNT').text(awaCnt);
                         if (drawFlag === "Y") {
                             if (msg.JUMP_FLG === "Y") {
-                                $("#win_btn").text("��д�ջ���ַ");
+                                $("#win_btn").text("填写收货地址");
                                 $("#win_btn").on("click", function () {
                                     $(".managePrize").show();
                                     $(".manage, #pageBar").hide();
                                     $(".prizeTitle").click();
                                 })
                             } else {
-                                $("#win_btn").text("�ر�");
+                                $("#win_btn").text("关闭");
                             }
                             if(msg.DRAW_ID){
                                 prizeFun(parseInt(msg.DRAW_ID.substr(10)));
@@ -416,10 +415,10 @@
                             $('.suc-result .prize').text(msg.DRAW_NM);
                         } else {
                             EndIndex = '7';
-                            $(".prizeNo").text("���ź�����δ�н�");
+                            $(".prizeNo").text("很遗憾，您未中奖");
                             $(".stateTxt").text(" ");
                             $(".stateTxt").css("height", "0.24rem");
-                            $("#win_btn").text("�ر�");
+                            $("#win_btn").text("关闭");
                             $('.suc-result .prize').hide();
                         }
                         Time = setInterval(Star, Speed);
@@ -428,7 +427,7 @@
             });
 
         // });
-        //��������
+        //报错弹框
         function showError (text) {
             $(".toastinfo").html(text);
             $("#toastcenter").show(300);
