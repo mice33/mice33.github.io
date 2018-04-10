@@ -81,18 +81,18 @@
 
         myTouch.on('swipeUp', function(e){
             $lis.each(function() {
-                animate_stack(this, y_space, z_space);
-            });
-            $lis.filter(':nth-child(' + current_index + ')').css('opacity', 0);
-            current_index++;
-
-            return false
-        }).on('swipeDown', function(e){
-            $lis.each(function() {
                 animate_stack(this, -y_space, -z_space);
             });
             $lis.filter(':nth-child(' + (current_index - 1) + ')').css('opacity', 1);
             current_index--;
+
+            return false
+        }).on('swipeDown', function(e){
+            $lis.each(function() {
+                animate_stack(this, y_space, z_space);
+            });
+            $lis.filter(':nth-child(' + current_index + ')').css('opacity', 0);
+            current_index++;
 
             return false
         });
