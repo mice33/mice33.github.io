@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<script src="https://www.cmpay.com/info/version3/common/scripts/fixScreen/fixScreen.js "></script>
+<style>
+    * { margin: 0; padding: 0; list-style: none; }
+    img { display: block; }
+    html, body { width: 100%; height: 100%;}
+    body { color: #fff; background: #333; font-family: Arial, sans-serif; }
+
+    #view { box-sizing: border-box;perspective: 11rem; -webkit-perspective-origin-x: 50%; width: 5.9rem;padding-top:35%; margin: 0 auto; height: 10rem;  position: relative; }
+    #stack { position: relative; }
+    #stack li { position: absolute; top: 0; left: 0; width: 5.9rem; height: 3.6rem; transition: all .5s cubic-bezier(0.18, 0.89, 0.32, 1.28)}
+    #stack img {width: 100%;height:100%;}
+</style>
+
+</head>
+<body>
+    <div id="view">
+        <ul id="stack">
+            <li><img src="img/1.png" /></li>
+            <li><img src="img/2.png" /></li>
+            <li><img src="img/3.png" /></li>
+            <li><img src="img/4.png" /></li>
+            <li><img src="img/5.png" /></li>
+            <li><img src="img/1.png" /></li>
+            <li><img src="img/2.png" /></li>
+            <li><img src="img/3.png" /></li>
+            <li><img src="img/4.png" /></li>
+            <li><img src="img/5.png" /></li>
+        </ul>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="alloy_finger.js"></script>
+
+    <script>
+    (function($) {
+
+        var y_space = lib.flexible.rem2px('1'),
+            z_space = lib.flexible.rem2px('1');
+
+        var $view = $('#view'),
+            $lis = $('#stack li');
+
+        var z_index = $lis.length,
+            current_index = 1,
+            translate_y = y_space * -1,
+            translate_z = z_space * -1;
+
+        $lis.each(function() {
+            $(this).css({
+                'transform' : 'translate3d(0px, ' + translate_y + 'px, ' + translate_z + 'px)',
+                'z-index' : z_index
+            }).data({
+                'translate_y' : translate_y,
+                'translate_z' : translate_z
+            });
+
+            z_index--;
+            translate_y -= y_space;
+            translate_z -= z_space;
+        });
+
+        function animate_stack(obj, y, z) {
+            var new_y = $(obj).data('translate_y') + y,
+                new_z = $(obj).data('translate_z') + z;
+
+            $(obj).css({
+                'transform' : 'translate3d(0px, ' + new_y + 'px, ' + new_z + 'px)'
+            }).data({
+                'translate_y' : new_y,
+                'translate_z' : new_z
+            });
+        }
+
+        new AlloyFinger($('body')[0], {
+            // touchMove:function(evt) {
+            //     if (Math.abs(evt.deltaX) >= Math.abs(evt.deltaY)) {
+            //         evt.preventDefault();
+            //     }
+            // },
+            swipe:function(evt){
+                console.log(evt.direction)
+                if(evt.direction === 'Down'){
+                    $lis.each(function() {
+                        animate_stack(this, y_space, z_space);
+                    });
+                    $lis.filter(':nth-child(' + current_index + ')').css('opacity', 0);
+                    current_index++;
+                } else if (evt.direction === 'Up') {
+                    $lis.each(function() {
+                        animate_stack(this, -y_space, -z_space);
+                    });
+                    $lis.filter(':nth-child(' + (current_index - 1) + ')').css('opacity', 1);
+                    current_index--;
+                }
+            }
+        });
+
+
+    })(jQuery);
+    </script>
+
+</body>
+</html>
