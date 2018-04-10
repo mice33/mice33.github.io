@@ -34,7 +34,7 @@
     </div>
 
     <script src="jquery.min.js"></script>
-    <script src="alloy_finger.js"></script>
+    <script src="toucher.js"></script>
 
     <script>
     (function($) {
@@ -76,30 +76,26 @@
             });
         }
 
-        new AlloyFinger($('body')[0], {
-            // touchMove:function(evt) {
-            //     if (Math.abs(evt.deltaX) >= Math.abs(evt.deltaY)) {
-            //         evt.preventDefault();
-            //     }
-            // },
-            swipe:function(evt){
-                console.log(evt.direction)
-                if(evt.direction === 'Down'){
-                    $lis.each(function() {
-                        animate_stack(this, y_space, z_space);
-                    });
-                    $lis.filter(':nth-child(' + current_index + ')').css('opacity', 0);
-                    current_index++;
-                } else if (evt.direction === 'Up') {
-                    $lis.each(function() {
-                        animate_stack(this, -y_space, -z_space);
-                    });
-                    $lis.filter(':nth-child(' + (current_index - 1) + ')').css('opacity', 1);
-                    current_index--;
-                }
-            }
-        });
 
+        var myTouch = util.toucher($('body')[0]);
+
+        myTouch.on('swipeUp', function(e){
+            $lis.each(function() {
+                animate_stack(this, y_space, z_space);
+            });
+            $lis.filter(':nth-child(' + current_index + ')').css('opacity', 0);
+            current_index++;
+
+            return false
+        }).on('swipeDown', function(e){
+            $lis.each(function() {
+                animate_stack(this, -y_space, -z_space);
+            });
+            $lis.filter(':nth-child(' + (current_index - 1) + ')').css('opacity', 1);
+            current_index--;
+
+            return false
+        });
 
     })(jQuery);
     </script>
