@@ -158,9 +158,13 @@
     <script>
     (function($) {
 
-        var y_space = lib.flexible.rem2px('0.8'),
-            z_space = lib.flexible.rem2px('0.9'),
-            y2_space = lib.flexible.rem2px('1.6');
+        function toFixed2(Num) {
+            return (Num.toFixed(2)) / 1;
+        }
+
+        var y_space = toFixed2(lib.flexible.rem2px('0.8')),
+            z_space = toFixed2(lib.flexible.rem2px('0.9')),
+            y2_space = toFixed2(lib.flexible.rem2px('1.6'));
 
         var $view = $('#view'),
             $lis = $('#stack li');
@@ -194,8 +198,8 @@
         });
 
         function animate_stack(obj, y, z) {
-            var new_y = $(obj).data('translate_y') + y,
-                new_z = $(obj).data('translate_z') + z,
+            var new_y = toFixed2($(obj).data('translate_y') + y),
+                new_z = toFixed2($(obj).data('translate_z') + z),
                 set_y = new_y,
                 set_z = new_z;
 
