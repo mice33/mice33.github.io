@@ -52,6 +52,7 @@
 
 </head>
 <body>
+    <div style="position:fixed;z-index:1;left:0;top:0;right:0;height:1rem;background-color:#333;"></div>
     <div id="search">
         <form action="###">
             <i class="search-form-icon"></i><input type="search" autocomplete="off" placeholder="请输入关键词" />
@@ -174,7 +175,7 @@
 
         var y_space = toFixed2(lib.flexible.rem2px('0.8')),
             z_space = toFixed2(lib.flexible.rem2px('0.9')),
-            y2_space = toFixed2(lib.flexible.rem2px('1.6'));
+            y2_space = toFixed2(lib.flexible.rem2px('2.8'));
 
         var $view = $('#view'),
             $lis = $('#stack li');
@@ -191,7 +192,7 @@
             if (set_y === 0) {
                 set_y = y2_space;
             } else if (-set_y === y_space) {
-                set_y = 0;
+                set_y = toFixed2(lib.flexible.rem2px('0.2'));
             }
 
             $(this).css({
