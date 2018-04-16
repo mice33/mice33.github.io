@@ -10,20 +10,11 @@
     html, body { width: 100%; height: 100%;overflow: hidden;}
     body { color: #fff; background: #000; font-family: Arial, sans-serif; }
 
-    #view {
-        box-sizing: border-box;
-        -webkit-perspective: 6rem;
-        perspective: 6rem;
-        -webkit-perspective-origin-x: 50%;
-        backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
-        width: 6.88rem;padding-top:20%; margin: 0 auto; height: 10rem;  position: relative;
-    }
+    #view { box-sizing: border-box;perspective: 6rem; -webkit-perspective-origin-x: 50%; width: 6.88rem;padding-top:20%; margin: 0 auto; height: 10rem;  position: relative; }
     #stack { position: relative;z-index:1;}
     #stack li { position: absolute; top: 0; left: 0; width: 6.88rem; height: 8.87rem; transition: all .65s cubic-bezier(0.18, 0.89, 0.32, 1.28)}
     #stack .avatar {position:absolute;left:50%;top:0;background: url(img/new/avatar.png) no-repeat;background-size: 100%;width: 0.95rem;height: 0.95rem;transform: translate(-50%, -50%);}
-    #stack .shadow img, #stack .shadow div {box-shadow: 0 -0.07rem 0.24rem rgba(127, 127, 127, 0.23);}
-    #stack .shadow div {line-height:5rem; text-align: center;font-size:1rem;color:#000;}
+    #stack .shadow img {box-shadow: 0 -0.07rem 0.24rem rgba(127, 127, 127, 0.23);}
     #stack img {width: 100%;height:100%;}
 
     input[type="search"]::-webkit-search-cancel-button{
@@ -146,20 +137,26 @@
     </div>
     <div id="view">
         <ul id="stack">
-            <li><i class="avatar"></i><div style="height:100%;background-color:#fff;">1</div></li>
-            <li><i class="avatar"></i><div style="height:100%;background-color:#fff;">2</div></li>
-            <li><i class="avatar"></i><div style="height:100%;background-color:#fff;">3</div></li>
-            <li><i class="avatar"></i><div style="height:100%;background-color:#fff;">4</div></li>
-            <li><i class="avatar"></i><div style="height:100%;background-color:#fff;">5</div></li>
-            <li><i class="avatar"></i><div style="height:100%;background-color:#fff;">6</div></li>
-            <li><i class="avatar"></i><div style="height:100%;background-color:#fff;">7</div></li>
-            <li><i class="avatar"></i><div style="height:100%;background-color:#fff;">8</div></li>
-            <li><i class="avatar"></i><div style="height:100%;background-color:#fff;">9</div></li>
-            <li><i class="avatar"></i><div style="height:100%;background-color:#fff;">10</div></li>
-            <li><i class="avatar"></i><div style="height:100%;background-color:#fff;">11</div></li>
-            <li><i class="avatar"></i><div style="height:100%;background-color:#fff;">12</div></li>
-            <li><i class="avatar"></i><div style="height:100%;background-color:#fff;">13</div></li>
-            <li><i class="avatar"></i><div style="height:100%;background-color:#fff;">14</div></li>
+            <li><i class="avatar"></i><img src="img/new/n1.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n2.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n3.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n4.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n1.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n2.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n3.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n4.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n1.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n2.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n3.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n4.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n1.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n2.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n3.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n4.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n1.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n2.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n3.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n4.png" /></li>
         </ul>
     </div>
     <div id="menu">
@@ -205,23 +202,23 @@
         function setSpace(num) {
             var tmp = {};
 
-            switch(true){
-                case num <= 0:
+            switch(num){
+                case 0:
                     tmp.y = toFixed2(lib.flexible.rem2px('4.4'));
                     tmp.z = toFixed2(lib.flexible.rem2px('0.6'));
                     tmp.shadow = true;
                     break;
-                case num === 1:
+                case 1:
                     tmp.y = toFixed2(lib.flexible.rem2px('2.5'));
                     tmp.z = 0;
                     tmp.shadow = true;
                     break;
-                case num === 2:
+                case 2:
                     tmp.y = toFixed2(lib.flexible.rem2px('0.8'));
                     tmp.z = -toFixed2(lib.flexible.rem2px('0.3'));
                     tmp.shadow = true;
                     break;
-                case num === 3:
+                case 3:
                     tmp.y = 0;
                     tmp.z = -toFixed2(lib.flexible.rem2px('0.8'));
                     tmp.shadow = true;
