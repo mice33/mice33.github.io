@@ -3,164 +3,190 @@
 <head>
 <meta charset="utf-8" />
 <title></title>
-<script src="https://www.cmpay.com/info/version3/common/scripts/fixScreen/fixScreen.js "></script>
+<script src="https://www.cmpay.com/info/version3/common/scripts/fixScreen/fixScreen720.js "></script>
 <style>
     * { margin: 0; padding: 0; list-style: none; }
     img { display: block; }
     html, body { width: 100%; height: 100%;overflow: hidden;}
-    body { color: #fff; background: #333; font-family: Arial, sans-serif; }
+    body { color: #fff; background: #000; font-family: Arial, sans-serif; }
 
-    #view { box-sizing: border-box;perspective: 6rem; -webkit-perspective-origin-x: 50%; width: 7.1rem;padding-top:20%; margin: 0 auto; height: 10rem;  position: relative; }
+    #view { box-sizing: border-box;perspective: 6rem; -webkit-perspective-origin-x: 50%; width: 6.88rem;padding-top:20%; margin: 0 auto; height: 10rem;  position: relative; }
     #stack { position: relative;z-index:1;}
-    #stack li { position: absolute; top: 0; left: 0; width: 7.1rem; height: 8rem; transition: all .5s cubic-bezier(0.18, 0.89, 0.32, 1.28)}
+    #stack li { position: absolute; top: 0; left: 0; width: 6.88rem; height: 8.87rem; transition: all .65s cubic-bezier(0.18, 0.89, 0.32, 1.28)}
+    #stack .avatar {position:absolute;left:50%;top:0;background: url(img/new/avatar.png) no-repeat;background-size: 100%;width: 0.95rem;height: 0.95rem;transform: translate(-50%, -50%);}
+    #stack .shadow img {box-shadow: 0 -0.07rem 0.24rem rgba(127, 127, 127, 0.23);}
     #stack img {width: 100%;height:100%;}
 
     input[type="search"]::-webkit-search-cancel-button{
         display: none;
     }
     #search {
+        box-sizing:border-box;
         position:fixed;
-        left:0.1rem;
-        top:0.2rem;
-        right:0.1rem;
+        left:0;
+        top:0;
+        right:0;
         z-index:2;
-        height:.60rem;
+        padding:0.2rem 0 0.2rem 0.2rem;
+        height:1.08rem;
+        background-color:#1d1d1d;
     }
     #search .search-form-icon {
         position:absolute;
         z-index:1;
         top:50%;
-        left:0.2rem;
+        left:0.4rem;
         width: 0.3rem;
         height: 0.3rem;
         transform: translateY(-50%);
-        background: url(data:image/png;base64,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) no-repeat;
+        background: url(data:image/png;base64,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) no-repeat;
         background-size: 100%;
     }
     #search input {
         box-sizing: border-box;
-        width: 100%;
-        height:.60rem;
+        width: 5rem;
+        height:.66rem;
+        line-height:.66rem;
         padding-left:0.75rem;
         font-size:0.24rem;
-        border:none;
-        border-radius: 0.3rem;
+        border:1PX solid #757575;
+        background-color:transparent;
         -webkit-appearance: none;
+    }
+
+    #menu {
+        display: flex;
+        position:fixed;
+        z-index:2;
+        left:0;
+        right:0;
+        bottom:0;
+        padding-top:0.2rem;
+        height:0.76rem;
+        background-color:#fff;
+    }
+
+    #menu a {
+        flex:1;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    #menu .sicon {
+        display:block;
+    }
+
+    #menu .icon {
+        display:inline-block;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    #menu .text {
+        color:#bababa;
+        font-size:0.2rem;
+    }
+
+    #menu .cur {
+        color:#2a2a2a;
+    }
+
+    .icon1 {
+        background-image: url(img/ico-1.png);
+        width: 0.44rem;
+        height: 0.38rem;
+    }
+
+    .icon2 {
+        background-image: url(img/ico-2.png);
+        width: 0.52rem;
+        height: 0.41rem;
+    }
+
+    .icon3 {
+        background-image: url(img/ico-3.png);
+        width: 0.96rem;
+        height: 0.96rem;
+        margin-top:-0.5rem;
+        padding:0.13rem;
+        background-origin: content-box;
+        background-color:#fff;
+        border-radius: 50%;
+    }
+
+    .icon4 {
+        background-image: url(img/ico-4.png);
+        width: 0.4rem;
+        height: 0.4rem;
+    }
+
+    .icon5 {
+        background-image: url(img/ico-5.png);
+        width: 0.38rem;
+        height: 0.4rem;
     }
 
 </style>
 
 </head>
 <body>
-    <div style="position:fixed;z-index:1;left:0;top:0;right:0;height:1rem;background-color:#333;"></div>
     <div id="search">
         <form action="###">
-            <i class="search-form-icon"></i><input type="search" autocomplete="off" placeholder="请输入关键词" />
+            <i class="search-form-icon"></i><input type="search" autocomplete="off" placeholder="" />
         </form>
     </div>
     <div id="view">
         <ul id="stack">
-            <li><img src="img/s1.png" /></li>
-            <li><img src="img/s2.png" /></li>
-            <li><img src="img/s3.png" /></li>
-            <li><img src="img/s4.png" /></li>
-            <li><img src="img/s5.png" /></li>
-            <li><img src="img/s1.png" /></li>
-            <li><img src="img/s2.png" /></li>
-            <li><img src="img/s3.png" /></li>
-            <li><img src="img/s4.png" /></li>
-            <li><img src="img/s5.png" /></li>
-            <li><img src="img/s1.png" /></li>
-            <li><img src="img/s2.png" /></li>
-            <li><img src="img/s3.png" /></li>
-            <li><img src="img/s4.png" /></li>
-            <li><img src="img/s5.png" /></li>
-            <li><img src="img/s1.png" /></li>
-            <li><img src="img/s2.png" /></li>
-            <li><img src="img/s3.png" /></li>
-            <li><img src="img/s4.png" /></li>
-            <li><img src="img/s5.png" /></li>
-            <li><img src="img/s1.png" /></li>
-            <li><img src="img/s2.png" /></li>
-            <li><img src="img/s3.png" /></li>
-            <li><img src="img/s4.png" /></li>
-            <li><img src="img/s5.png" /></li>
-            <li><img src="img/s1.png" /></li>
-            <li><img src="img/s2.png" /></li>
-            <li><img src="img/s3.png" /></li>
-            <li><img src="img/s4.png" /></li>
-            <li><img src="img/s5.png" /></li>
-            <li><img src="img/s1.png" /></li>
-            <li><img src="img/s2.png" /></li>
-            <li><img src="img/s3.png" /></li>
-            <li><img src="img/s4.png" /></li>
-            <li><img src="img/s5.png" /></li>
-            <li><img src="img/s1.png" /></li>
-            <li><img src="img/s2.png" /></li>
-            <li><img src="img/s3.png" /></li>
-            <li><img src="img/s4.png" /></li>
-            <li><img src="img/s5.png" /></li>
-            <li><img src="img/s1.png" /></li>
-            <li><img src="img/s2.png" /></li>
-            <li><img src="img/s3.png" /></li>
-            <li><img src="img/s4.png" /></li>
-            <li><img src="img/s5.png" /></li>
-            <li><img src="img/s1.png" /></li>
-            <li><img src="img/s2.png" /></li>
-            <li><img src="img/s3.png" /></li>
-            <li><img src="img/s4.png" /></li>
-            <li><img src="img/s5.png" /></li>
-            <li><img src="img/s1.png" /></li>
-            <li><img src="img/s2.png" /></li>
-            <li><img src="img/s3.png" /></li>
-            <li><img src="img/s4.png" /></li>
-            <li><img src="img/s5.png" /></li>
-            <li><img src="img/s1.png" /></li>
-            <li><img src="img/s2.png" /></li>
-            <li><img src="img/s3.png" /></li>
-            <li><img src="img/s4.png" /></li>
-            <li><img src="img/s5.png" /></li>
-            <li><img src="img/s1.png" /></li>
-            <li><img src="img/s2.png" /></li>
-            <li><img src="img/s3.png" /></li>
-            <li><img src="img/s4.png" /></li>
-            <li><img src="img/s5.png" /></li>
-            <li><img src="img/s1.png" /></li>
-            <li><img src="img/s2.png" /></li>
-            <li><img src="img/s3.png" /></li>
-            <li><img src="img/s4.png" /></li>
-            <li><img src="img/s5.png" /></li>
-            <li><img src="img/s1.png" /></li>
-            <li><img src="img/s2.png" /></li>
-            <li><img src="img/s3.png" /></li>
-            <li><img src="img/s4.png" /></li>
-            <li><img src="img/s5.png" /></li>
-            <li><img src="img/s1.png" /></li>
-            <li><img src="img/s2.png" /></li>
-            <li><img src="img/s3.png" /></li>
-            <li><img src="img/s4.png" /></li>
-            <li><img src="img/s5.png" /></li>
-            <li><img src="img/s1.png" /></li>
-            <li><img src="img/s2.png" /></li>
-            <li><img src="img/s3.png" /></li>
-            <li><img src="img/s4.png" /></li>
-            <li><img src="img/s5.png" /></li>
-            <li><img src="img/s1.png" /></li>
-            <li><img src="img/s2.png" /></li>
-            <li><img src="img/s3.png" /></li>
-            <li><img src="img/s4.png" /></li>
-            <li><img src="img/s5.png" /></li>
-            <li><img src="img/s1.png" /></li>
-            <li><img src="img/s2.png" /></li>
-            <li><img src="img/s3.png" /></li>
-            <li><img src="img/s4.png" /></li>
-            <li><img src="img/s5.png" /></li>
-            <li><img src="img/s1.png" /></li>
-            <li><img src="img/s2.png" /></li>
-            <li><img src="img/s3.png" /></li>
-            <li><img src="img/s4.png" /></li>
-            <li><img src="img/s5.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n1.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n2.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n3.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n4.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n1.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n2.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n3.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n4.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n1.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n2.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n3.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n4.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n1.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n2.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n3.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n4.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n1.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n2.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n3.png" /></li>
+            <li><i class="avatar"></i><img src="img/new/n4.png" /></li>
         </ul>
+    </div>
+    <div id="menu">
+        <a href="###" class="cur">
+            <span class="sicon">
+                <i class="icon icon1"></i>
+            </span>
+            <p class="text">名片夹</p>
+        </a>
+        <a href="###">
+            <span class="sicon">
+                <i class="icon icon2"></i>
+            </span>
+            <p class="text">名片群</p>
+        </a>
+        <a href="###">
+            <span class="icon icon3"></span>
+        </a>
+        <a href="###">
+            <span class="sicon">
+                <i class="icon icon4"></i>
+            </span>
+            <p class="text">应用</p>
+        </a>
+        <a href="###">
+            <span class="sicon">
+                <i class="icon icon5"></i>
+            </span>
+            <p class="text">我的</p>
+        </a>
     </div>
 
     <script src="jquery.min.js"></script>
@@ -173,58 +199,69 @@
             return (Num.toFixed(2)) / 1;
         }
 
-        var y_space = toFixed2(lib.flexible.rem2px('0.8')),
-            z_space = toFixed2(lib.flexible.rem2px('0.3')),
-            y2_space = toFixed2(lib.flexible.rem2px('2.8'));
+        function setSpace(num) {
+            var tmp = {};
+
+            switch(num){
+                case 0:
+                    tmp.y = toFixed2(lib.flexible.rem2px('4.4'));
+                    tmp.z = toFixed2(lib.flexible.rem2px('0.6'));
+                    tmp.shadow = true;
+                    break;
+                case 1:
+                    tmp.y = toFixed2(lib.flexible.rem2px('2.5'));
+                    tmp.z = 0;
+                    tmp.shadow = true;
+                    break;
+                case 2:
+                    tmp.y = toFixed2(lib.flexible.rem2px('0.8'));
+                    tmp.z = -toFixed2(lib.flexible.rem2px('0.3'));
+                    tmp.shadow = true;
+                    break;
+                case 3:
+                    tmp.y = 0;
+                    tmp.z = -toFixed2(lib.flexible.rem2px('0.8'));
+                    tmp.shadow = true;
+                    break;
+                default:
+                    tmp.y = -toFixed2(lib.flexible.rem2px('0.7'));
+                    tmp.z = -toFixed2(lib.flexible.rem2px('1.5'));
+                    tmp.shadow = false;
+            }
+
+            return tmp;
+        }
 
         var $view = $('#view'),
             $lis = $('#stack li');
 
         var z_index = $lis.length,
             current_index = 1,
-            translate_y = 0,
-            translate_z = 0;
+            tmpNum = 1;
 
         $lis.each(function() {
-            var set_y = translate_y,
-                set_z = translate_z;
+            var spaceYZ = setSpace(tmpNum);
 
-            if (set_y === 0) {
-                set_y = y2_space;
-            } else if (-set_y === y_space) {
-                set_y = toFixed2(lib.flexible.rem2px('0.2'));
-            }
-
-            $(this).css({
-                'transform' : 'translate3d(0px, ' + set_y + 'px, ' + set_z + 'px)',
+            $(this)[spaceYZ.shadow ? 'addClass' : 'removeClass']('shadow').css({
+                'transform' : 'translate3d(0px, ' + spaceYZ.y + 'px, ' + spaceYZ.z + 'px)',
                 'z-index' : z_index
             }).data({
-                'translate_y' : translate_y,
-                'translate_z' : translate_z
+                'num' : tmpNum
             });
 
             z_index--;
-            translate_y -= y_space;
-            translate_z -= z_space;
+            tmpNum++;
         });
 
-        function animate_stack(obj, y, z) {
-            var new_y = toFixed2($(obj).data('translate_y') + y),
-                new_z = toFixed2($(obj).data('translate_z') + z),
-                set_y = new_y,
-                set_z = new_z;
+        function animate_stack(obj, swipeDirection) {
+            var num = $(obj).data('num'),
+                newNum = swipeDirection === 'swipeUp' ? num + 1 : num - 1,
+                spaceYZ = setSpace(newNum);
 
-            if (set_y === 0) {
-                set_y = y2_space;
-            } else if (-set_y === y_space) {
-                set_y = 0;
-            }
-
-            $(obj).css({
-                'transform' : 'translate3d(0px, ' + set_y + 'px, ' + set_z + 'px)'
+            $(obj)[spaceYZ.shadow ? 'addClass' : 'removeClass']('shadow').css({
+                'transform' : 'translate3d(0px, ' + spaceYZ.y + 'px, ' + spaceYZ.z + 'px)'
             }).data({
-                'translate_y' : new_y,
-                'translate_z' : new_z
+                num : newNum
             });
         }
 
@@ -234,7 +271,7 @@
         myTouch.on('swipeUp', function(e){
             if (current_index !== 1) {
                 $lis.each(function() {
-                    animate_stack(this, -y_space, -z_space);
+                    animate_stack(this, 'swipeUp');
                 });
                 $lis.filter(':nth-child(' + (current_index - 1) + ')').css('opacity', 1);
                 current_index--;
@@ -244,7 +281,7 @@
         }).on('swipeDown', function(e){
             if (current_index !== $lis.length) {
                 $lis.each(function() {
-                    animate_stack(this, y_space, z_space);
+                    animate_stack(this, 'swipeDown');
                 });
                 $lis.filter(':nth-child(' + current_index + ')').css('opacity', 0);
                 current_index++;
